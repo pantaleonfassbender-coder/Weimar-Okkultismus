@@ -1,0 +1,138 @@
+/* Aber es geschah: Nacht, Protokollpapier, Rotlicht. Nur Systemschriften, nichts von außen. */
+:root {
+  --nacht: #15110f;
+  --nacht2: #201916;
+  --rand: #3a2e28;
+  --papier: #efe6d3;
+  --papier2: #e6dbc4;
+  --tinte: #2a221d;
+  --blass: #6b5d52;
+  --rot: #b0362a;
+  --rotlicht: #e0523f;
+  --gruen: #5d6b3d;
+  --serif: Georgia, "Times New Roman", serif;
+  --mono: "Courier New", Courier, monospace;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--nacht); color: #d9cfc0;
+  font: 17px/1.55 var(--serif);
+  background-image: radial-gradient(ellipse at 50% -10%, rgba(176,54,42,.18), transparent 60%);
+  background-attachment: fixed; min-height: 100vh;
+}
+a { color: #e8a090; }
+a:hover { color: #ffc3b5; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 0 16px; }
+
+header.top { border-bottom: 1px solid var(--rand); background: #15110f; position: sticky; top: 0; z-index: 5; }
+header.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 10px; padding-bottom: 10px; flex-wrap: wrap; }
+.marke { font-variant: small-caps; letter-spacing: .06em; color: #f0e4d2; text-decoration: none; font-size: 18px; }
+.marke .lampe { display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: var(--rotlicht); box-shadow: 0 0 10px 3px rgba(224,82,63,.55); margin-right: 8px; vertical-align: 2px; }
+nav.top a { color: #bfb2a2; text-decoration: none; font-size: 14px; margin-left: 14px; }
+nav.top a:hover { color: #fff; }
+
+.werte { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; padding: 10px 0 12px; }
+.wert { font-size: 13px; color: #bfb2a2; }
+.wert b { color: #f0e4d2; font-weight: normal; }
+.wert .bar { height: 6px; background: #2e2420; border-radius: 3px; margin-top: 4px; overflow: hidden; }
+.wert .bar i { display: block; height: 100%; background: linear-gradient(90deg, #7a2a20, var(--rotlicht)); transition: width .5s; }
+.wert .dz { font-family: var(--mono); font-size: 12px; margin-left: 4px; }
+.dz.p { color: #a8c07a; } .dz.m { color: #ef8a7a; }
+
+main { padding: 26px 0 40px; }
+.papier {
+  background: var(--papier); color: var(--tinte); border-radius: 3px;
+  padding: 26px 28px; box-shadow: 0 10px 40px rgba(0,0,0,.45);
+  background-image: repeating-linear-gradient(transparent 0 27px, rgba(80,110,150,.10) 27px 28px);
+}
+@media (max-width: 560px) { .papier { padding: 20px 18px; } body { font-size: 16px; } }
+.papier a { color: #8a2a1f; }
+.kopf { font-family: var(--mono); font-size: 13px; color: var(--blass); letter-spacing: .03em; display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+h1, h2, h3 { font-weight: normal; line-height: 1.2; }
+.papier h2 { font-size: 30px; margin: 6px 0 14px; color: #1c1612; }
+.titel h1 { font-size: 46px; margin: 0 0 6px; color: #f3e8d6; letter-spacing: .01em; }
+.titel .unter { font-style: italic; color: #cbbca8; margin: 0 0 22px; }
+
+figure { margin: 6px 0 18px; }
+figure img { max-width: 100%; max-height: 62vh; width: auto; height: auto; margin: 0 auto; display: block; border: 1px solid #b9ab92; background: #ddd2bc; filter: sepia(.15); }
+figcaption { font-size: 13.5px; color: var(--blass); margin-top: 6px; line-height: 1.45; }
+
+.lage { margin: 0 0 18px; }
+.optionen { display: grid; gap: 10px; }
+button { font: inherit; cursor: pointer; }
+.opt {
+  text-align: left; background: #f8f2e6; color: var(--tinte); border: 1px solid #b9ab92;
+  border-left: 4px solid #b9ab92; border-radius: 3px; padding: 12px 14px; line-height: 1.45;
+}
+.opt:hover, .opt:focus-visible { border-left-color: var(--rot); background: #fffaf0; outline: none; }
+.opt .nr { font-family: var(--mono); color: var(--rot); margin-right: 8px; }
+.opt[disabled] { cursor: default; opacity: .55; }
+.opt.gewaehlt { opacity: 1; border-left-color: var(--rot); background: #fffaf0; }
+.opt .hist { display: block; font-size: 13px; color: var(--gruen); margin-top: 4px; font-style: italic; }
+
+.eintrag { margin: 20px 0 6px; padding: 14px 16px; background: #fbf7ee; border: 1px dashed #a89a80; font-family: var(--mono); font-size: 15px; line-height: 1.5; white-space: pre-wrap; }
+.eintrag .label { display: block; font-size: 12px; color: var(--blass); letter-spacing: .08em; text-transform: uppercase; margin-bottom: 4px; }
+.folge { font-style: italic; margin: 10px 0 0; }
+.deltas { font-family: var(--mono); font-size: 13px; margin-top: 6px; }
+
+.geschah { margin-top: 24px; border-top: 2px solid #c9b99d; padding-top: 16px; }
+.geschah h3 { font-size: 20px; margin: 0 0 10px; color: var(--rot); font-variant: small-caps; letter-spacing: .04em; }
+.histwahl { margin: 0 0 14px; }
+blockquote { margin: 0 0 14px; padding: 2px 0 2px 16px; border-left: 3px solid #c9b99d; }
+blockquote p { margin: 0 0 4px; }
+blockquote cite { display: block; font-style: normal; font-size: 13.5px; color: var(--blass); }
+.hinweis { font-size: 15.5px; }
+.frage { margin: 18px 0 0; padding: 12px 14px; background: #2a201c; color: #f1e5d3; border-radius: 3px; font-style: italic; }
+.frage::before { content: "Zum Nachdenken: "; font-style: normal; color: #e8a090; }
+
+.weiter { display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
+.btn { background: var(--rot); color: #fff7ee; border: 0; border-radius: 3px; padding: 11px 20px; font-size: 16px; text-decoration: none; display: inline-block; }
+.btn:hover, .btn:focus-visible { background: #c8402f; color: #fff; outline: none; }
+.btn.leise { background: transparent; color: #8a2a1f; border: 1px solid #b9ab92; }
+.dunkel .btn.leise { color: #e8a090; border-color: var(--rand); }
+
+.start p { margin: 0 0 14px; }
+.start .fein { font-size: 14px; color: #a99c8c; }
+.start .btn { font-size: 18px; padding: 13px 26px; }
+.start .bild { float: right; width: 250px; margin: 4px 0 14px 24px; }
+.start .bild figure { margin: 0; }
+.start::after { content: ""; display: block; clear: both; }
+@media (max-width: 560px) { .start .bild { float: none; width: 70%; margin: 0 auto 18px; } }
+.start .bild img { filter: sepia(.25) brightness(.9); border-color: var(--rand); }
+.start figcaption { color: #a99c8c; }
+
+.ende h2 { font-size: 32px; }
+.typ { font-size: 22px; color: var(--rot); margin: 4px 0 8px; }
+.buch { list-style: none; padding: 0; margin: 12px 0 0; font-family: var(--mono); font-size: 14.5px; }
+.buch li { padding: 8px 0; border-bottom: 1px dotted #b9ab92; }
+.buch .d { color: var(--blass); display: block; font-size: 12.5px; }
+.buch .h { color: var(--gruen); font-size: 12.5px; }
+.epilog p { margin: 0 0 12px; }
+.fein { font-size: 13.5px; color: var(--blass); }
+
+footer.fuss { border-top: 1px solid var(--rand); color: #9a8d7d; font-size: 13.5px; padding: 18px 0 40px; }
+footer.fuss a { color: #c9a296; margin-right: 14px; }
+
+.legal h1, .quellen h1 { font-size: 34px; color: #f3e8d6; margin: 0 0 12px; }
+.legal .papier, .quellen .papier { margin-bottom: 18px; }
+.legal h2, .quellen h2 { color: #f3e8d6; font-size: 24px; margin: 30px 0 12px; }
+.papier h3 { font-size: 19px; margin: 0 0 8px; color: #1c1612; }
+.quellen .station h3 { font-size: 20px; }
+.quellen li { margin-bottom: 8px; }
+.sr { position: absolute; left: -9999px; }
+
+@media print {
+  header.top, footer.fuss, .weiter, .nodruck { display: none !important; }
+  body { background: #fff; color: #000; }
+  .papier { box-shadow: none; background: #fff; }
+}
+
+#ausgang { scroll-margin-top: 150px; }
+@media (max-width: 560px) {
+  header.top .wrap { padding-top: 6px; padding-bottom: 6px; row-gap: 2px; }
+  .marke { font-size: 16px; }
+  nav.top a { margin-left: 0; margin-right: 12px; font-size: 13px; }
+  .werte { padding: 2px 0 8px; gap: 8px; }
+  .wert { font-size: 12px; }
+}

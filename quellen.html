@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quellen und Bilder · Aber es geschah</title>
+<meta name="description" content="Alle Zitate und Bilder des Spiels mit Fundstelle und Link zum Seitenbild.">
+<meta name="color-scheme" content="dark">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="marke" href="index.html"><span class="lampe" aria-hidden="true"></span>Aber es geschah</a>
+    <nav class="top"><a href="index.html">Zum Spiel</a><a href="legal.html">Impressum</a></nav>
+  </div>
+</header>
+<main class="wrap quellen">
+  <h1>Quellen und Bilder</h1>
+  <div class="papier">
+    <h3>Wie gearbeitet wurde</h3>
+    <p>Jedes Zitat im Spiel ist am Bild der gedruckten Seite gelesen; der Link führt zu diesem Seitenbild. Rechtschreibung und Druckfehler sind die des Originals. Kürzungen stehen in eckigen Klammern.</p>
+    <p>Zitiert wird nur, was gemeinfrei ist: in Europa, weil die Verfasser vor 1956 gestorben sind oder anonym vor mehr als siebzig Jahren veröffentlicht haben, und in den Vereinigten Staaten, wo das Spiel liegt, weil die Texte vor 1931 erschienen sind oder amtliche Werke sind. Texte von 1931 und später, darunter Harry Price' Bericht von 1933 und die Presse von 1933, sind im Spiel deshalb nur nacherzählt.</p>
+    <p>Die Rolle des Protokollanten ist erfunden, ebenso die Frau mit dem Attest (Station 9), der Anwalt in Leitmeritz (Station 10) und die Einladung von 1933 (Station 12). Die Werte für Sorgfalt, Zugang und Ansehen sind Spielwerte, keine Befunde.</p>
+    <p>Die gedruckten Quellen erscheinen vollständig im Lesebuch <em>Aber es geschah. Die Quellen</em>.</p>
+  </div>
+  <div id="liste"><noscript><p>Die Liste wird aus den Spieldaten erzeugt und braucht JavaScript.</p></noscript></div>
+  <h2>Zum Weiterlesen</h2>
+  <div class="papier">
+    <ul>
+      <li>Thomas Mann, Okkulte Erlebnisse, in: Die Neue Rundschau 35 (1924), Bd. 1, S. 193–224. <a href="https://archive.org/details/die-neue-rundschau-35.-jg.-der-freien-buhne-35.1924-1/page/193/mode/1up" target="_blank" rel="noopener">Internet Archive</a></li>
+      <li>Thomas Mann, Der Zauberberg, Kapitel „Fragwürdigstes“ (Berlin 1930), S. 856–893. <a href="https://archive.org/details/derzauberberg0000roma/page/856/mode/1up" target="_blank" rel="noopener">Internet Archive</a></li>
+      <li>Max Dessoir, Vom Jenseits der Seele, 4./5. Aufl. (Stuttgart 1920). <a href="https://archive.org/details/vomjenseitsderse00dess" target="_blank" rel="noopener">Internet Archive</a></li>
+      <li>Psychische Studien 1923–1925 und Zeitschrift für Parapsychologie 1926–1927, Universitätsbibliothek Freiburg. <a href="https://dl.ub.uni-freiburg.de/diglit/psychische_studien_ga" target="_blank" rel="noopener">Digitalisate</a></li>
+      <li>Zeitschrift für kritischen Okkultismus 1 (1925/26), IAPSOP. <a href="https://archive.org/details/IAPSOP-zeitschrift_kritischen_okkultismus_v1_n1_1926" target="_blank" rel="noopener">Internet Archive</a></li>
+      <li>Harry Price, An Account of Some Further Experiments with Rudi Schneider (London 1933). <a href="https://archive.org/details/accountofsomefur00pric" target="_blank" rel="noopener">Internet Archive</a></li>
+      <li>Uwe Schellinger, Andreas Anton, Michael T. Schetsche, Zwischen Szientismus und Okkultismus. Grenzwissenschaftliche Experimente der deutschen Marine im Zweiten Weltkrieg, in: Zeitschrift für Anomalistik 10 (2010), S. 287–321. <a href="https://www.anomalistik.de/images/pdf/zfa/zfa2010_3_287_schellinger_anton_schetsche.pdf" target="_blank" rel="noopener">PDF</a></li>
+      <li>Zeitungen: Deutsche Allgemeine Zeitung und Berliner Börsen-Zeitung über <a href="https://zefys.staatsbibliothek-berlin.de/" target="_blank" rel="noopener">ZEFYS</a> (Staatsbibliothek zu Berlin); Vorwärts und Sozialdemokrat (Prag) über die <a href="https://library.fes.de/" target="_blank" rel="noopener">Bibliothek der Friedrich-Ebert-Stiftung</a>. Die Seitenbilder liegen dort unter eigenen Lizenzen und werden hier nur verlinkt.</li>
+    </ul>
+  </div>
+</main>
+<footer class="fuss">
+  <div class="wrap"><p><a href="index.html">← Zum Spiel</a><a href="legal.html">Impressum und Datenschutz</a></p></div>
+</footer>
+<script src="data.js"></script>
+<script>
+(function () {
+  "use strict";
+  const S = window.SPIEL;
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const z = q => `<li>${esc(q.cite)}. <a href="${esc(q.url)}" target="_blank" rel="noopener">Seitenbild</a></li>`;
+  const b = x => x ? `<li><em>Bild:</em> ${esc(x.cap)} <a href="${esc(x.url)}" target="_blank" rel="noopener">Quelle</a></li>` : "";
+  let h = '<h2>Nach Stationen</h2>';
+  h += `<div class="papier station"><h3>Zum Beginn</h3><ul>${b(S.startBild)}</ul></div>`;
+  S.stationen.forEach((s, i) => {
+    const extra = s.optionen.filter(o => o.zitat).map(o => z(o.zitat)).join("");
+    h += `<div class="papier station"><h3>${i + 1}. ${esc(s.titel)} <span class="fein">(${esc(s.ort)}, ${esc(s.jahr)})</span></h3><ul>${b(s.bild)}${s.zitate.map(z).join("")}${extra}${s.hinweisUrl ? `<li>Nacherzählt nach: Harry Price, An Account of Some Further Experiments with Rudi Schneider (London 1933), S. 147–150. <a href="${esc(s.hinweisUrl)}" target="_blank" rel="noopener">Seitenbild</a></li>` : ""}</ul></div>`;
+  });
+  h += `<div class="papier station"><h3>Danach</h3><ul>${b(S.endBild)}<li>${esc(S.epilogRef)}</li></ul></div>`;
+  document.getElementById("liste").innerHTML = h;
+})();
+</script>
+</body>
+</html>
