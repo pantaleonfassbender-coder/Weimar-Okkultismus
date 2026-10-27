@@ -28,7 +28,7 @@
       {
         jahr: "27. Januar 1922", ort: "München", titel: "Ton am Finger",
         bild: { src: "img/willy-1919-tafel.jpg", cap: "Willy Schneider, sechzehn Jahre alt, in einer Sitzung bei Schrenck-Notzing im Oktober 1919; auf Schulter und Kopf, was das Protokoll „teleplastische Substanz“ nennt. Aufnahmen Schrenck-Notzings, aus: Phenomena of Materialisation (London 1920). Internet Archive, gemeinfrei.", url: "https://archive.org/details/phenomenaofmater00schr/page/n520/mode/1up" },
-        lage: "Das Medium ist Willy Schneider aus Braunau, 19 Jahre alt, Lehrling bei einem Zahntechniker. Auf dem Tischchen steht ein Block nasser Tonerde, der einen Abdruck aufnehmen soll. Nach der Sitzung zeigt der vorher glatte Ton sechs flache Eindrücke. Und im Nagelbett von Willys linkem kleinem Finger findet sich Tonerde, auch auf dem Rücken des vierten Fingers. Sie haben den Block vor sich.",
+        lage: "Das Medium ist Willy Schneider aus Braunau, Jahrgang 1903, Lehrling bei einem Zahntechniker. Auf dem Tischchen steht ein Block nasser Tonerde, der einen Abdruck aufnehmen soll. Nach der Sitzung zeigt der vorher glatte Ton sechs flache Eindrücke. Und im Nagelbett von Willys linkem kleinem Finger findet sich Tonerde, auch auf dem Rücken des vierten Fingers. Sie haben den Block vor sich.",
         optionen: [
           { text: "Die Spuren genau aufschreiben, ohne Deutung, und verlangen, dass Willys Hände künftig vor jeder Sitzung untersucht werden.", d: { sorg: 1, zug: -1, ruf: 1 }, folge: "Ein Satz, der dem Hausherrn nicht gefällt, und eine Regel, die künftig jede Sitzung schützt.", eintrag: "Nach Schluss Tonerde im Nagelbett des linken kleinen Fingers und auf dem Rücken des vierten Fingers. Hände vor Beginn nicht untersucht. Künftig Untersuchung vor jeder Sitzung." },
           { text: "Die Spuren aufschreiben und gleich die Erklärung dazusetzen: Willy hat den ganzen Tag im zahntechnischen Labor mit Ton gearbeitet.", d: { sorg: -1, zug: 1, ruf: 0 }, folge: "Der Befund steht im Protokoll, die Deutung gleich daneben. Wer es liest, liest beides zusammen.", eintrag: "Tonspuren an der linken Hand, wohl von der Arbeit im zahntechnischen Laboratorium.", wer: "So steht es bei Schrenck-Notzing" },
@@ -148,7 +148,7 @@
           Object.assign({ t: "Während des Verlaufs der sämtlichen seit 26. Mai 1926 mit den Medien Willy und Rudi Schneider abgehaltenen zahlreichen Sitzungen wurde dieser elektrische Kontrollapparat ohne irgendwelche Störung mit Erfolg benützt." }, FR("zs_para1926", "0544", "Ebd., S. 515")),
           Object.assign({ t: "In einigen Fällen gelang mir dies in wenigen Minuten bis zu 6- oder 10mal, während die Versuchsperson nach Beendigung des Versuchs steif und fest behauptete, beschwören zu können, daß bestimmt die Kette nicht ein einziges Mal unterbrochen sei." }, IA("IAPSOP-zeitschrift_kritischen_okkultismus_v1_n4_1926", 18, "R. W. Schulte, Experimentalpsychologische Untersuchungen zur Prüfung der Kontrollbedingungen bei okkultistischen Dunkelsitzungen, in: Zeitschrift für kritischen Okkultismus 1 (1926), H. 4, S. 259"))
         ],
-        hinweis: "Das dritte Zitat kommt aus Berlin, aus dem Labor des Psychologen R. W. Schulte, im selben Jahr: Er löste im Dunkeln die Hand aus der Kette, und seine Versuchspersonen hätten geschworen, dass sie nie unterbrochen war. Krall starb noch 1926.",
+        hinweis: "Das dritte Zitat kommt aus Berlin, aus dem Labor des Psychologen R. W. Schulte, im selben Jahr: Er löste im Dunkeln die Hand aus der Kette, und seine Versuchspersonen hätten geschworen, dass sie nie unterbrochen war.",
         frage: "Was misst Ihr bestes Instrument, und was misst es nicht?"
       },
       {
@@ -239,7 +239,7 @@
     epilog: [
       "Hanussen wurde im April 1933 ermordet, die Täter nie ermittelt. Thomas Mann, Nobelpreisträger von 1929, kehrte im Februar 1933 von einer Vortragsreise nicht nach München zurück und ging ins Exil.",
       "Ab dem 1. Mai 1934 war das gewerbsmäßige Wahrsagen in Berlin verboten; bis 1936 folgten weitere Regierungsbezirke. Nach dem Flug von Rudolf Heß nach England ließ Reinhard Heydrich am 9. Juni 1941 reichsweit Astrologen, Okkultisten und Anthroposophen verhaften und ihre Bücher beschlagnahmen („Aktion gegen Geheimlehren und sogenannte Geheimwissenschaften“).",
-      "Albert Moll starb 1939 in Berlin. Rudi Schneider gab die Sitzungen bald auf; er lebte später in Weyer in Oberösterreich und starb 1957.",
+      "Albert Moll starb 1939 in Berlin. Rudi Schneider gab die Sitzungen bald auf, wurde Fahrlehrer und starb 1957 in Weyer in Oberösterreich.",
       "Ihr Protokollbuch liegt da längst im Schrank."
     ],
     epilogRef: "Referat: Hanussen nach Pressemeldungen vom April und Juli 1933 (Central-Volksblatt, Arnsberg, 10.4.1933; Deutsche Freiheit, Saarbrücken, 11.7.1933); Wahrsageverbote nach Polizeiverordnungen 1934–1936 (Presseberichte); die Aktion von 1941 nach U. Schellinger, A. Anton, M. Schetsche, Zeitschrift für Anomalistik 10 (2010), S. 287–321, mit Beleg im Bundesarchiv (R 58/1029).",
