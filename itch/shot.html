@@ -1,0 +1,16 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><title>shot</title>
+<style>html,body{margin:0;height:100%;background:#15110f}iframe{border:0;width:100%;height:100%;display:block}</style></head>
+<body><iframe id="f" src="../index.html"></iframe><script>
+/* Nur für Bildschirmfotos: steuert das Spiel im Rahmen. ?start&n=Stationen&k=Wahl&sc=Scroll */
+const q = new URLSearchParams(location.search), f = document.getElementById("f");
+f.onload = async () => {
+  const w = f.contentWindow, d = w.document, sl = ms => new Promise(r => setTimeout(r, ms));
+  if (!q.has("start")) return;
+  d.getElementById("los").click();
+  for (let i = 0; i < (+q.get("n") || 0); i++) { await sl(40); d.querySelector('.opt[data-k="' + (q.get("w") || 1) + '"]').click(); await sl(30); d.getElementById("weiter").click(); }
+  if (q.has("k")) { await sl(60); d.querySelector('.opt[data-k="' + q.get("k") + '"]').click(); }
+  await sl(900);
+  if (q.has("sc")) w.scrollTo(0, +q.get("sc"));
+  else if (q.has("k")) { const a = d.getElementById("ausgang"); w.scrollTo(0, a.getBoundingClientRect().top + w.scrollY - 150); }
+};
+</script></body></html>
